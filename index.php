@@ -1,3 +1,4 @@
+Welcome to the Login Screen
 <?php
    include("_includes/config.inc");
    include("_includes/dbconnect.inc");
