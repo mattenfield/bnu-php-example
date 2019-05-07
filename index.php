@@ -1,3 +1,6 @@
+<html>
+<h1> Welcome to the College Platform </h2>
+</html>
 <?php
 
    include("_includes/config.inc");
