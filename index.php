@@ -1,8 +1,5 @@
-<html>
-<h1> Welcome to the College Platform </h2>
-</html>
 <?php
-
+   echo "<h2> Welcome to the College Platform </h2>";
    include("_includes/config.inc");
    include("_includes/dbconnect.inc");
    include("_includes/functions.inc");
