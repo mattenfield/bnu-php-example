@@ -27,9 +27,6 @@
   Password:<br/>
   <input name="password" type="password" required/>
   <br/><br/>
-
-
-
 </div>
 <div class="col-sm-9 col-md-6 col-lg-8">
 First Line Address:<br/>
@@ -81,7 +78,7 @@ Postcode:<br/>
        house,town,county,country,postcode) VALUES
  ('$ID','$hashedpass', '$dateofbirth', '$fname', '$lname', '$firstline', '$town', '$county', 
    '$country', '$postcode');");
-   header("Location: students.php");
+   header("Location: success.php");
    }
    
  }
