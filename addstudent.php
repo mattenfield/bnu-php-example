@@ -79,3 +79,5 @@
    
    echo template("templates/default.php", $data);
    echo template("templates/partials/footer.php");
+
+?>
