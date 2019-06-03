@@ -13,15 +13,23 @@ if (isset($_SESSION['id'])) {
 
    // if the form has been submitted
    if (isset($_POST['submit'])) {
+     
+     $fname = mysqli_real_escape_string($conn, $_POST['txtfirstname']);       //sanitise inputs
+     $lname = mysqli_real_escape_string($conn, $_POST['txtlastname']);
+     $firstline = mysqli_real_escape_string($conn, $_POST['txthouse']);
+     $town = mysqli_real_escape_string($conn, $_POST['txttown']);
+     $county = mysqli_real_escape_string($conn, $_POST['txtcounty']);
+     $country = mysqli_real_escape_string($conn, $_POST['txtcountry']);
+     $postcode = mysqli_real_escape_string($conn, $_POST['txtpostcode']);
 
       // build an sql statment to update the student details
-      $sql = "update student set firstname ='" . $_POST['txtfirstname'] . "',";
-      $sql .= "lastname ='" . $_POST['txtlastname']  . "',";
-      $sql .= "house ='" . $_POST['txthouse']  . "',";
-      $sql .= "town ='" . $_POST['txttown']  . "',";
-      $sql .= "county ='" . $_POST['txtcounty']  . "',";
-      $sql .= "country ='" . $_POST['txtcountry']  . "',";
-      $sql .= "postcode ='" . $_POST['txtpostcode']  . "' ";
+      $sql = "update student set firstname ='" . $fname . "',";
+      $sql .= "lastname ='" . $lname  . "',";
+      $sql .= "house ='" . $firstline  . "',";
+      $sql .= "town ='" . $town  . "',";
+      $sql .= "county ='" . $county  . "',";
+      $sql .= "country ='" . $country  . "',";
+      $sql .= "postcode ='" . $postcode . "' ";
       $sql .= "where studentid = '" . $_SESSION['id'] . "';";
       $result = mysqli_query($conn,$sql);
 
