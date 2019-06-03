@@ -39,25 +39,34 @@ if (isset($_SESSION['id'])) {
       // see http://stackoverflow.com/questions/6924193/what-is-the-use-of-eod-in-php for info
       // also http://stackoverflow.com/questions/8280360/formatting-an-array-value-inside-a-heredoc
       $data['content'] = <<<EOD
+      <h2> My details </h2>
+      <br/>
+      <div class="row">
+      <div class="col-sm-3 col-md-6 col-lg-4">
+      <form name="frmdetails" action="" method="post">
+      First Name : </br>
+      <input name="txtfirstname" type="text" value="{$row['firstname']}" /><br/><br/>
+      Surname : <br/>
+      <input name="txtlastname" type="text"  value="{$row['lastname']}" /><br/><br/>
+      First Line : <br/>
+      <input name="txthouse" type="text"  value="{$row['house']}" /><br/><br/>
+      Town :   <br/>
+      <input name="txttown" type="text"  value="{$row['town']}" /><br/><br/>
+    
+    </div>
+    <div class="col-sm-9 col-md-6 col-lg-8">
+    County :<br/>
+    <input name="txtcounty" type="text"  value="{$row['county']}" /><br/><br/>
+    Country :<br/>
+    <input name="txtcountry" type="text"  value="{$row['country']}" /><br/><br/>
+    Postcode :<br/>
+    <input name="txtpostcode" type="text"  value="{$row['postcode']}" /><br/><br/><br/>
+    <input type="submit" value="Save" name="submit"/>
+    </form>
+   </div>
+   </div>
 
-   <h2>My Details</h2>
-   <form name="frmdetails" action="" method="post">
-   First Name :
-   <input name="txtfirstname" type="text" value="{$row['firstname']}" /><br/>
-   Surname :
-   <input name="txtlastname" type="text"  value="{$row['lastname']}" /><br/>
-   Number and Street :
-   <input name="txthouse" type="text"  value="{$row['house']}" /><br/>
-   Town :
-   <input name="txttown" type="text"  value="{$row['town']}" /><br/>
-   County :
-   <input name="txtcounty" type="text"  value="{$row['county']}" /><br/>
-   Country :
-   <input name="txtcountry" type="text"  value="{$row['country']}" /><br/>
-   Postcode :
-   <input name="txtpostcode" type="text"  value="{$row['postcode']}" /><br/>
-   <input type="submit" value="Save" name="submit"/>
-   </form>
+  
 
 EOD;
 

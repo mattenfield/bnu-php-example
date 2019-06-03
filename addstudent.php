@@ -9,37 +9,49 @@
  $data['content'] .= '<h2> Add a student </h2>';
  $data['content'] .= '</br><h5>Please enter all fields to add a user.</h5></br>';
  $data['content'] .= '<form method="post">';
- $data['content'] .= ' Student ID: 
+ $data['content'] .= ' 
+ <div class="row">
+ <div class="col-sm-3 col-md-6 col-lg-4">
+ Student ID: <br/>
   <input name="txtID" type="text" align="right" required/>
-  <br/>
-  First Name:
+  <br/><br/>
+  First Name:<br/>
   <input name="txtfname" type="text" required/>
-  <br/>
-  Last Name:
+  <br/><br/>
+  Last Name:<br/>
   <input name="txtlname" type="text" required/>
-  <br/>
-  Date Of Birth:
+  <br/><br/>
+  Date Of Birth:<br/>
   <input name="dateofbirth" type="date" required/>
-  <br/>
-  Password:
+  <br/><br/>
+  Password:<br/>
   <input name="password" type="password" required/>
-  <br/>
-  First Line Address:
-  <input name="txtfirstline" type="text" required/>
-  <br/>
-  Town:
-  <input name="txttown" type="text" required/>
-  <br/>
-  County:
-  <input name="txtcounty" type="text" required/>
-  <br/>
-  Country:
-  <input name="txtcountry" type="text" required/>
-  <br/>
-  Postcode:
-  <input name="txtpostcode" type="text" required/>
-  <br/><br/><br/><br/><br/>
-  <input type="submit" value="Create User" name="btncreate" />';
+  <br/><br/>
+
+
+
+</div>
+<div class="col-sm-9 col-md-6 col-lg-8">
+First Line Address:<br/>
+<input name="txtfirstline" type="text" required/>
+<br/><br/>
+Town:<br/>
+<input name="txttown" type="text" required/>
+<br/><br/>
+County:<br/>
+<input name="txtcounty" type="text" required/>
+<br/><br/>
+Country:<br/>
+<input name="txtcountry" type="text" required/>
+<br/><br/>
+Postcode:<br/>
+<input name="txtpostcode" type="text" required/>
+<br/><br/><br/>
+
+</div>
+</div>
+<input type="submit" value="Create User" name="btncreate" />';
+
   $data['content'] .= '</form>';
 
  if(isset($_POST['btncreate'])){
@@ -61,7 +73,7 @@
    $count = mysqli_num_rows($idcheck);
    if($count>0)
    {
-      echo "<H4>Error: Unfortunately, there is already a student with this ID.</H4>";
+      echo "<H3>Error: Unfortunately, there is already a student with this ID.</H3>";
    }
    else
    {
