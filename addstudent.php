@@ -78,7 +78,7 @@ Postcode:<br/>
        house,town,county,country,postcode) VALUES
  ('$ID','$hashedpass', '$dateofbirth', '$fname', '$lname', '$firstline', '$town', '$county', 
    '$country', '$postcode');");
-   header("Location: success.php");
+   $data['content'] .= '<meta http-equiv="refresh" content="0"; URL="http://acoding.ninja/success.php" />';
    }
    
  }
