@@ -78,7 +78,7 @@ Postcode:<br/>
        house,town,county,country,postcode) VALUES
  ('$ID','$hashedpass', '$dateofbirth', '$fname', '$lname', '$firstline', '$town', '$county', 
    '$country', '$postcode');");
-   $data['content'] .= '<meta http-equiv="refresh" content="0"; URL="http://acoding.ninja/success.php" />';
+   echo "<H3>Success: A new user has been created!</H3>";
    }
    
  }

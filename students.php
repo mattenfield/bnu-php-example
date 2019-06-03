@@ -41,7 +41,7 @@
           mysqli_query($conn, "DELETE FROM student WHERE studentid= '$theid'");
           $i++;
         }
-        header("Location: students.php");
+         echo "<H3>Success: Data successfully removed!</H3>";
       }
 
       // render the template
