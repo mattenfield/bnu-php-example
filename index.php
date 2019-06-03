@@ -6,7 +6,7 @@
    if (isset($_GET['return'])) {
       $msg = "";
       if ($_GET['return'] == "fail") {$msg = "Login Failed. Please try again.";}
-      $data['message'] = "<p>$msg</p>";
+      $data['message'] = "<h3>$msg</h3>";
    }
    if (isset($_SESSION['id'])) {
      $namequery =  "SELECT firstname from student where studentid='". $_SESSION['id'] . "';";
