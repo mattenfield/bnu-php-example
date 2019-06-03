@@ -1,10 +1,7 @@
 <?php
-
    include("_includes/config.inc");
    include("_includes/dbconnect.inc");
    include("_includes/functions.inc");
-
-
    // check logged in
    if (isset($_SESSION['id'])) {
 
@@ -73,9 +70,7 @@
   ('$ID','$hashedpass', '$dateofbirth', '$fname', '$lname', '$firstline', '$town', '$county', '$country', '$postcode');");
     header("Location: students.php");
     }
-  
-  
-      
+
   }
   else {
     
@@ -83,6 +78,4 @@
   }
    
    echo template("templates/default.php", $data);
-
-
    echo template("templates/partials/footer.php");
