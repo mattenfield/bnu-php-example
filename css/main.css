@@ -1,0 +1,30 @@
+body{
+  background-color:#213a60; 
+}
+.jumbotron{
+  background-color:#C7C7C7;
+  color: #213a60;
+}
+.main-nav{
+  background-color:#C7C7C7;
+}
+li {
+  list-style-type:none;
+  padding: 0.5em 100px !important;
+  }
+  
+a{
+  color: #C7C7C7;
+}
+
+a:hover{
+  color:#730000;
+}
+h1{
+  color: lightblue;
+}
+
+
+
+  
+  

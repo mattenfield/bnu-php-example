@@ -6,11 +6,11 @@
    if (isset($_SESSION['id'])) {
      echo template("templates/partials/header.php");
      echo template("templates/partials/nav.php");
- $data['content'] .= '<h1> Add a student </h1>';
- $data['content'] .= '</br></br>';
+ $data['content'] .= '<h2> Add a student </h2>';
+ $data['content'] .= '</br><h5>Please enter all fields to add a user.</h5></br>';
  $data['content'] .= '<form method="post">';
  $data['content'] .= ' Student ID: 
-  <input name="txtID" type="text" required/>
+  <input name="txtID" type="text" align="right" required/>
   <br/>
   First Name:
   <input name="txtfname" type="text" required/>

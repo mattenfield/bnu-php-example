@@ -23,7 +23,7 @@ if (isset($_SESSION['id'])) {
      // Build sql statment that selects all the modules
      $sql = "select * from module";
      $result = mysqli_query($conn, $sql);
-
+     $data['content'] .= "<h2>Assign a Module</h2>";
      $data['content'] .= "<form name='frmassignmodule' action='' method='post' >";
      $data['content'] .= "Select a module to assign<br/>";
      $data['content'] .= "<select name='selmodule' >";
@@ -31,7 +31,7 @@ if (isset($_SESSION['id'])) {
      while($row = mysqli_fetch_array($result)) {
         $data['content'] .= "<option value='$row[modulecode]'>$row[name]</option>";
      }
-     $data['content'] .= "</select><br/>";
+     $data['content'] .= "</select><br/></br>";
      $data['content'] .= "<input type='submit' name='confirm' value='Save' />";
      $data['content'] .= "</form>";
    }

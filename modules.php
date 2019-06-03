@@ -15,7 +15,7 @@
       $sql = "select * from studentmodules sm, module m where m.modulecode = sm.modulecode and sm.studentid = '" . $_SESSION['id'] ."';";
 
       $result = mysqli_query($conn,$sql);
-
+       $data['content'] .= '<h2> My Modules</h2> </br></br>';
       // prepare page content
       $data['content'] .= "<table border='1'>";
       $data['content'] .= "<tr><th colspan='5' align='center'>Modules</th></tr>";
